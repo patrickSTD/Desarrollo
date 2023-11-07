@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace DB.Models;
 
-public partial class Trabajadores
+public class Trabajadores
 {
     public int Id { get; set; }
 

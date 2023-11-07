@@ -7,26 +7,19 @@ namespace DB.Data;
 
 public partial class TrabajadoresContext : DbContext
 {
-    public TrabajadoresContext()
-    {
-    }
 
     public TrabajadoresContext(DbContextOptions<TrabajadoresContext> options)
         : base(options)
     {
     }
 
-    public virtual DbSet<Departamento> Departamentos { get; set; }
+    public DbSet<Departamento> Departamentos { get; set; }
 
-    public virtual DbSet<Distrito> Distritos { get; set; }
+    public DbSet<Distrito> Distritos { get; set; }
 
-    public virtual DbSet<Provincia> Provincia { get; set; }
+    public DbSet<Provincia> Provincia { get; set; }
 
-    public virtual DbSet<Trabajadores> Trabajadores { get; set; }
-
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseSqlServer("Server=STD;Database=TrabajadoresPrueba;Trusted_Connection=True;TrustServerCertificate=True;");
-
+    public DbSet<Trabajadores> Trabajadores { get; set; }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Departamento>(entity =>

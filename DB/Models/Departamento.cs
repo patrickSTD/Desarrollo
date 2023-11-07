@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DB.Models;
 
-public partial class Departamento
+public class Departamento
 {
+
     public int Id { get; set; }
 
     public string? NombreDepartamento { get; set; }

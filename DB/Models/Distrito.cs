@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace DB.Models;
 
-public partial class Distrito
+public class Distrito
 {
     public int Id { get; set; }
 
